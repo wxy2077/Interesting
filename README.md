@@ -13,7 +13,7 @@ Glory of Kings王者荣耀英雄信息资料的爬取
 
 ### 目标网址
 #### http://pvp.qq.com/web201605/herolist.shtml
-- 分析页面　这一步最重要
+#### 分析页面　这一步最重要
 - 1首先分析页面,发现页面response里面的数据和element页面的数据不一样，响应的数据是动态渲染的
 - 2那我们不能直接提取详细英雄的url，然后找找有没有json数据的url　http://pvp.qq.com/web201605/js/herolist.json
 - 3找到一个json数据的url,点开发现有英雄id相关的信息,　可以用英雄id构造英雄详细页面
