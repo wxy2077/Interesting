@@ -32,7 +32,7 @@ http://pvp.qq.com/web201605/herolist.shtml
         http://pvp.qq.com/web201605/js/summoner.json
         http://pvp.qq.com/web201605/js/ming.json
 
-5写代码,没啥技术含量,就是一些常规操作,OK
+5写代码,没啥技术含量,就是一些常规操作.
 
 
 """
@@ -128,7 +128,7 @@ class KingWangZhe(object):
             for item in content['img_list']:
                 img_url = self.temp_img_url.format(content['hero_id'], content['hero_id'],
                                                    content['img_list'].index(item) + 1)
-                response = requests.get(img_url, headers=self.headers)
+                response = requests.get(img_url, headers=self.headers, stream=True)
                 with open("./imgs2/" + content['hero_name'] + item + '.jpg', 'wb') as f:
                     f.write(response.content)
                 print(content['hero_name']+item, "大图保存成功")
